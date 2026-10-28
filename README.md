@@ -1,18 +1,21 @@
+
 ## 🗓️ Occupational Scheduling Automation
 
-**Occupational Health Scheduling & Convocation Automation — Portfolio Demo**  
+**💼 Professional Context | Experimental Prototype · Independent Demo**  
+**Occupational Health Scheduling & Convocation Automation**  
 🔍 Connecting workflows, APIs, and user-centered digital solutions.
 
 ![Project Status](https://img.shields.io/badge/Status-Discontinued-6C757D?style=for-the-badge)
-![Project Type](https://img.shields.io/badge/Type-Portfolio%20Demo-673AB7?style=for-the-badge)
+![Project Context](https://img.shields.io/badge/Context-Professional-1F6FEB?style=for-the-badge)
+![Repository Type](https://img.shields.io/badge/Repository-Independent%20Demo-673AB7?style=for-the-badge)
 
 ---
 
 ### 🚀 About the Project
 
-An experimental prototype designed to explore the automation of occupational health exam convocations and appointments. The project brings together **JavaScript, API development, workflow orchestration, and a web-based scheduling experience**.
+This project originated from a scheduling and convocation challenge encountered in a **professional setting**, rather than from a university assignment. It explores how occupational health exam appointments could be streamlined through **JavaScript, API development, workflow orchestration, and a web-based scheduling experience**.
 
-Development was discontinued after the scheduling platform used in the original context introduced an equivalent feature. This repository is a **separately built, independent demonstration** for learning and portfolio purposes, not the original operational system.
+The original exploration was discontinued after the scheduling platform used at the time introduced an equivalent feature. **This public repository is a separately built demonstration**, based on fictional scenarios; it does not include the original workplace code or represent a deployed company product.
 
 > **Demo only:** All employees, clinics, events, and schedules are fictional. No real appointments are booked, no private systems are accessed, and no sensitive data or credentials are included.
 
@@ -67,7 +70,6 @@ The scheduling portal and dashboard share data using browser `localStorage`. Thi
 | Employee Scheduling Portal | Management Dashboard |
 | :---: | :---: |
 | ![Demo scheduling portal](occupational-scheduling-automation/docs/preview-portal.png) | ![Demo management dashboard](occupational-scheduling-automation/docs/preview-dashboard.png) |
-  
 
 ---
 
@@ -75,7 +77,10 @@ The scheduling portal and dashboard share data using browser `localStorage`. Thi
 
 **Requirements:** Node.js 20 or later. No external packages or accounts required.
 
+From the repository root:
+
 ```bash
+cd occupational-scheduling-automation
 npm start
 ```
 
@@ -101,26 +106,29 @@ This endpoint validates a fictional event and returns a normalized JSON response
 
 ### 📂 Repository Structure
 
+The public repository currently keeps its source files in a nested project directory:
+
 ```text
-api/                 REST demo endpoints
-lib/                 Validation, integrations, and token examples
-public/              Scheduling portal and dashboard
-workflows/           Sample n8n workflow (inactive)
-supabase/            Optional schema and adapter references
-samples/             Fictional event payloads
-tests/               Automated tests
-docs/                Screenshots and architecture notes
-server.js            Local Node.js server
-vercel.json          Serverless route configuration
+occupational-scheduling-automation/
+├── api/            REST demo endpoints
+├── lib/            Validation, integrations, and token examples
+├── public/         Scheduling portal and dashboard
+├── workflows/      Sample n8n workflow (inactive)
+├── supabase/       Optional schema and adapter references
+├── samples/        Fictional event payloads
+├── tests/          Automated tests
+├── docs/           Screenshots and architecture notes
+├── server.js       Local Node.js server
+└── vercel.json     Serverless route configuration
 ```
 
-For more details, see [Architecture Notes](docs/ARQUITETURA.md) and [Security Notes](SECURITY.md).
+For more details, see [Architecture Notes](occupational-scheduling-automation/docs/ARQUITETURA.md) and [Security Notes](occupational-scheduling-automation/SECURITY.md).
 
 ---
 
 ### 🚧 Project Status
 
-**Experimental project · Development discontinued · Independent portfolio demonstration**
+**Professional context · Original exploration discontinued · Independent portfolio demonstration**
 
 The original exploration was discontinued after equivalent scheduling functionality became available in the software used at the time. The repository documents the technical concepts explored and offers a **safe, fictional implementation** for demonstration.
 
@@ -132,4 +140,4 @@ This is **not** production software: real systems, corporate authentication, liv
 
 **Isabelle Ramires** · [@Ramirescodes0](https://github.com/Ramirescodes0)
 
-*Portfolio project focused on integration, automation, and software development.*
+*Independent demonstration of technical concepts explored in a professional context; not an academic assignment or an operational company system.*
