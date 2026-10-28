@@ -66,7 +66,8 @@ The scheduling portal and dashboard share data using browser `localStorage`. Thi
 
 | Employee Scheduling Portal | Management Dashboard |
 | :---: | :---: |
-| ![Demo scheduling portal](docs/preview-portal.png) | ![Demo management dashboard](docs/preview-dashboard.png) |
+| ![Demo scheduling portal](occupational-scheduling-automation/docs/preview-portal.png) | ![Demo management dashboard](occupational-scheduling-automation/docs/preview-dashboard.png) |
+  
 
 ---
 
