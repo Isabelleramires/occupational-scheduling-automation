@@ -136,8 +136,5 @@ This is **not** production software: real systems, corporate authentication, liv
 
 ---
 
-### 👩‍💻 Developed by
 
-**Isabelle Ramires** · [@Ramirescodes0](https://github.com/Ramirescodes0)
-
-*Independent demonstration of technical concepts explored in a professional context; not an academic assignment or an operational company system.*
+*Independent demonstration of technical concepts explored in a professional context, not an academic assignment or an operational company system.*
