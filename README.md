@@ -1,7 +1,7 @@
 
 ## 🗓️ Occupational Scheduling Automation
 
-**💼 Professional Context | Experimental Prototype · Independent Demo**  
+**💼 Professional Context | Experimental Prototype**  
 **Occupational Health Scheduling & Convocation Automation**  
 🔍 Connecting workflows, APIs, and user-centered digital solutions.
 
