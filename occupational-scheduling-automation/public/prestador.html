@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Painel de gestão demonstrativo com convocações fictícias.">
+  <title>Gestão de convocações — Demonstração</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/style.css">
+  <script src="./assets/data.js" defer></script>
+  <script src="./assets/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <aside class="admin-sidebar">
+    <a href="./index.html" class="brand admin-brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="5" y="6" width="18" height="17" rx="4" stroke="currentColor" stroke-width="2"/><path d="M9 4v5M19 4v5M6 12h16M10 17l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>agenda<span class="brand-light">ocupacional</span><small>PAINEL DEMONSTRATIVO</small></span></a>
+    <div class="admin-menu-label">ESPAÇO DE GESTÃO</div>
+    <nav class="admin-menu" aria-label="Menu do painel">
+      <button class="active" data-tab="overview"><span>▦</span> Visão geral</button>
+      <button data-tab="convocations"><span>☷</span> Convocações</button>
+      <button data-tab="integrations"><span>⇄</span> Integrações</button>
+      <button data-tab="about"><span>ⓘ</span> Sobre o projeto</button>
+    </nav>
+    <div class="admin-sidebar-bottom"><div class="side-demo-badge">● <span>Dados 100% fictícios</span></div><a href="./index.html" class="back-link">← Portal do colaborador</a></div>
+  </aside>
+  <div class="admin-shell">
+    <header class="admin-topbar"><span class="topbar-path">Workspace <span>/</span> <b id="tab-title">Visão geral</b></span><span class="admin-env">DEMO / AMBIENTE LOCAL</span></header>
+    <main class="admin-content">
+      <section class="admin-intro"><div><div class="eyebrow">PROTÓTIPO DE AUTOMAÇÃO</div><h1 id="page-title">Visão geral</h1><p id="page-description">Acompanhe as convocações e os agendamentos simulados neste navegador.</p></div><button class="btn btn-outline" id="reset-button">↻ Reiniciar demonstração</button></section>
+      <div id="dashboard-view"></div>
+    </main>
+  </div>
+  <dialog id="create-dialog" class="dialog"><form method="dialog" id="create-form"><div class="dialog-head"><h2>Nova convocação fictícia</h2><button class="icon-button" type="button" id="close-dialog" aria-label="Fechar">×</button></div><p>Use somente dados inventados. Nenhuma informação será enviada a serviços externos.</p><label>Nome de exemplo<input name="name" required maxlength="70" placeholder="Ex.: Pessoa Exemplo"></label><label>Tipo de exame<select name="examType" required><option value="">Selecione</option><option>Admissional</option><option>Periódico</option><option>Retorno ao trabalho</option><option>Mudança de função</option><option>Demissional</option></select></label><label>Unidade fictícia<input name="unit" required maxlength="70" value="Unidade Demonstrativa"></label><div class="dialog-actions"><button class="btn btn-outline" type="button" id="cancel-dialog">Cancelar</button><button class="btn btn-primary" type="submit">Criar convocação</button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

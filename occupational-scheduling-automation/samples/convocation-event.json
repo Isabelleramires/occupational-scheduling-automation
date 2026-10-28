@@ -1,0 +1,6 @@
+{
+  "externalId": "DEMO-EVENT-001",
+  "examType": "Periódico",
+  "unit": "Unidade Demonstrativa",
+  "exams": ["Avaliação clínica", "Audiometria"]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "DEMO | Receber e normalizar convocação",
+  "nodes": [
+    {
+      "parameters": { "httpMethod": "POST", "path": "demo-convocacao", "responseMode": "responseNode", "options": {} },
+      "id": "demo-webhook-in",
+      "name": "Webhook - Evento fictício",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [260, 280],
+      "webhookId": "fictitious-demo-convocation"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body ?? $input.first().json; const allowed = ['Admissional', 'Periódico', 'Retorno ao trabalho', 'Mudança de função', 'Demissional']; if (typeof body.externalId !== 'string' || !/^DEMO-[A-Z0-9-]{3,40}$/.test(body.externalId)) throw new Error('Use um externalId fictício iniciando com DEMO-'); if (!allowed.includes(body.examType)) throw new Error('Tipo de exame inválido'); if (typeof body.unit !== 'string' || !body.unit.trim()) throw new Error('Informe uma unidade fictícia'); if (!Array.isArray(body.exams) || !body.exams.length) throw new Error('Informe exames de exemplo'); return [{ json: { externalId: body.externalId, examType: body.examType, unit: body.unit, exams: body.exams } }];"
+      },
+      "id": "demo-normalize",
+      "name": "Code - Validar evento",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [500, 280]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://YOUR-DEMO-DOMAIN.example/api/integration-preview",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "demo-http",
+      "name": "HTTP - Simular integração",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [750, 280]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "demo-response",
+      "name": "Responder ao webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [990, 280]
+    }
+  ],
+  "connections": {
+    "Webhook - Evento fictício": { "main": [[{ "node": "Code - Validar evento", "type": "main", "index": 0 }]] },
+    "Code - Validar evento": { "main": [[{ "node": "HTTP - Simular integração", "type": "main", "index": 0 }]] },
+    "HTTP - Simular integração": { "main": [[{ "node": "Responder ao webhook", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "active": false,
+  "tags": []
+}
